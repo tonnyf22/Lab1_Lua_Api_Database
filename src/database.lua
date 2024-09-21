@@ -3,15 +3,39 @@ local database = {}
 local API = require("LuaORM.API")
 local Guys;
 
+local connection_values = function()
+	local vals = {
+		db_name = "lua_to_api_to_database",
+		db_host = "127.0.0.1",
+		db_port = 3306,
+		db_usr = "root",
+		db_pass = "root",
+	}
+
+	local db_init_file = io.open("db_init.txt", "r")
+	if db_init_file then
+		vals.db_name = db_init_file:read("*line")
+		vals.db_host = db_init_file:read("*line")
+		vals.db_port = db_init_file:read("*line").tonumber()
+		vals.db_usr = db_init_file:read("*line")
+		vals.db_pass = db_init_file:read("*line")
+		vals.db_init_file:close()
+	end
+
+	return vals
+end
+
 database.set_up_connection = function()
+	local db_conn = connection_values()
+
 	API.ORM:initialize({
 		connection = "LuaSQL/MySQL",
 		database = {
-			databaseName = "lua_to_api_to_database",
-			host = "127.0.0.1",
-			portNumber = 3306,
-			userName = "root",
-			password = "root"
+			databaseName = db_conn.db_name,
+			host = db_conn.db_host,
+			portNumber = db_conn.db_port,
+			userName = db_conn.db_usr,
+			password = db_conn.db_pass
 		},
 		logger = { isEnabled = false, isDebugEnabled = false }
 	})
