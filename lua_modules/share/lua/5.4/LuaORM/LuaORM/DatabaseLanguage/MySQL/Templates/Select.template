@@ -1,0 +1,48 @@
+{#
+ # Builds a SELECT query.
+ #
+ # @tparam Query query The SELECT query
+ # @tparam BaseDatabaseLanguage language The DatabaseLanguage
+ #}
+
+SELECT
+
+{# List of columns #}
+{% if (query:getOptions()["selectOnlyAggregatedTableColumns"] == true) then %}
+  {% tableColumns = query:getAggregatedTableColumns() %}
+{% else %}
+  {% tableColumns = query:getAllTableColumns() %}
+{% end %}
+
+{% for i, column in ipairs(tableColumns) do %}
+
+  {% if (i > 1) then %} , {% end %}
+
+  <br>
+  <whitespace:2>
+  {[ LuaORM_API.ORM:getTemplateRequirePath("MySQL", "Generic/TableColumn"),
+     { column = column, language = language }
+  ]}
+  <whitespace>
+  AS
+  <whitespace>
+  {* language:escapeIdentifier(column:getSelectAlias()) *}
+
+{% end %}
+
+{# Select rules #}
+{% if (not query:getClauses()["select"]:isEmpty()) then %}
+  {[ LuaORM_API.ORM:getTemplateRequirePath("MySQL", "Clause/Select"),
+     { select = query:getClauses()["select"], language = language }
+  ]}
+{% end %}
+
+<br>
+FROM
+<whitespace>
+{* language:escapeIdentifier(query:getTargetTable():getName()) *}
+
+{[ LuaORM_API.ORM:getTemplateRequirePath("MySQL", "Generic/Clauses"),
+   { query = query, language = language, ignoredClauses = {} }
+]}
+;

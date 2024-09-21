@@ -1,0 +1,127 @@
+rock_manifest = {
+   doc = {
+      LICENSE = "1c9ae8c56c214d72b132ca4bc3a2a000",
+      ["README.md"] = "fd8cfa21cc67bdca9e825d1e41af41df"
+   },
+   lua = {
+      LuaORM = {
+         ["API.lua"] = "6c6a771af8c7124b288305be377ca816",
+         ["DefaultFieldTypes.lua"] = "311929db624ab52055181e84b45930ff",
+         LuaORM = {
+            DatabaseConnection = {
+               ["BaseCursor.lua"] = "2f8fa2599e562c6ad1d13dce5c234a27",
+               ["BaseDatabaseConnection.lua"] = "23cc6c2a526835ba2f7c7d1d49cb4307",
+               LuaSQL = {
+                  ["LuaSQLConnection.lua"] = "f64c14946bd85ecbcb46bc72e9eb9422",
+                  ["LuaSQLCursor.lua"] = "1d1827e51c42af214bd95f50bd4c7663",
+                  ["MySQLConnection.lua"] = "975e8b0be9aa8c37558979e34d43643f",
+                  ["PostgreSQLConnection.lua"] = "1166073a79e10d181637607012c34239",
+                  ["SQLiteConnection.lua"] = "751e8d90cd41e0136ec9ab2f142a3abd"
+               }
+            },
+            DatabaseLanguage = {
+               ["BaseDatabaseLanguage.lua"] = "9cd7efe81fa04164733ead0ba3a18fad",
+               ["DataType.lua"] = "f757a4dc6fffaf71ffd1b36f5983050e",
+               ["DataTypeList.lua"] = "7c27b02c29b3d2f7b1da293d598e7626",
+               MySQL = {
+                  ["MySQLDatabaseLanguage.lua"] = "515cbb3baba7aedf1cbf32cb48970ae8",
+                  Templates = {
+                     Clause = {
+                        Condition = {
+                           ["Condition.template"] = "b6f3a09d0c9c9c89287fe8dfcff499dd",
+                           ["Equation.template"] = "e932e48a69d98c11560494e1615459f5"
+                        },
+                        ["GroupBy.template"] = "67c6dab297fd958044cf993798aa35dc",
+                        ["Join.template"] = "0c6327b09c2fb2ad2215d30ca67de615",
+                        ["Limit.template"] = "e37bd702eceb8f66924ea65b807ea5c1",
+                        ["OrderBy.template"] = "6c43de3b2a86a9ed5ddf445f0ac6141d",
+                        ["Select.template"] = "6acf2ede9efa63168a1d6792bb7427ad",
+                        ["Where.template"] = "1e4b566bb148f8bcc3271abece4ad04e"
+                     },
+                     Create = {
+                        ["ForeignKey.template"] = "f7421a0b536470952ee6d4d44fe38cbf",
+                        ["TableColumn.template"] = "b8198127747214fd7951ded443ec96bd"
+                     },
+                     ["CreateTable.template"] = "03e286d85cbe38a04857fd46dbb73ba9",
+                     ["Delete.template"] = "9df4b75eb45870415b29c9cd8ded5639",
+                     Generic = {
+                        ["Clauses.template"] = "16b258fba26a57114e63617d962aa3aa",
+                        ["TableColumn.template"] = "f0ee92d14431657f7694bf7b00903d16"
+                     },
+                     ["Insert.template"] = "de580e534c3c596a6e2f5610db02a9d0",
+                     ["Select.template"] = "90b3b6a839dc841874343726105a53b3",
+                     ["Update.template"] = "66a927dc5b643eb30e33ad87e632b88c"
+                  }
+               }
+            },
+            FieldValueRowList = {
+               FieldValueRow = {
+                  ["FieldValue.lua"] = "cfea785cd4c5d70790b3fb91423ba649",
+                  ["FieldValueRow.lua"] = "10bb953dac9f35ddadb642e3a04f3490",
+                  ["FieldValueRowDataParser.lua"] = "47fb2c747a39c615d6fa55ed9850b4c1",
+                  ["FieldValueRowQueryBuilder.lua"] = "c398a01e520d84c3df9d009bcbd97a89",
+                  ["FieldValueRowQueryExecutor.lua"] = "cd83b6c828b8abe0a30b7408b1bedfca"
+               },
+               ["FieldValueRowList.lua"] = "25605a967985f99e2f32d16c0d469a25",
+               ["FieldValueRowListBuilder.lua"] = "6205224ea698e0e69fd7fab6e97da47b"
+            },
+            ["Model.lua"] = "9d4405202a3c669001d56ffdb4b3f968",
+            ["ORM.lua"] = "655863666c2702ec9a4935c3d60c5547",
+            Query = {
+               Clause = {
+                  ["GroupBy.lua"] = "ac701d61b00556f80c45ff275d306e4b",
+                  Join = {
+                     ["Join.lua"] = "8fdc5bb6c2873001651f58d895f5af00",
+                     ["JoinRule.lua"] = "de75ddc6423f9f0edcb9d04c9b90cd45"
+                  },
+                  ["Limit.lua"] = "af9d6ca143981d03ce8cc6ac08e14013",
+                  OrderBy = {
+                     ["OrderBy.lua"] = "7a339b660b128e9282f7a58539fd55c1",
+                     ["OrderByRule.lua"] = "0cb8620beca37d06ee97b0e3105dc052"
+                  },
+                  Select = {
+                     ["AggregateFunctionRule.lua"] = "df92f2a01a1ef18ec71efbd44be90261",
+                     ["Select.lua"] = "7cb68b37bc28e377273924b3a9aadd08",
+                     ["SelectRule.lua"] = "60ec9d90d8c3ae663c11fac242e0d9b8"
+                  },
+                  ["Where.lua"] = "3b731fa4e443aff6d5d7fd80af84de85"
+               },
+               ["Clause.lua"] = "23f3b9ad7787b58be82380c00cc0065e",
+               Condition = {
+                  ["Condition.lua"] = "a7e7511a705a8cd59eeebf1882709c41",
+                  ["Equation.lua"] = "9656ea1dfb88dc932c73fb996c93e066"
+               },
+               ["ConditionClause.lua"] = "7d7bf9a888de195c4a9029f2210c59c4",
+               ["Query.lua"] = "f5a8065703d91760510193d9188e0adc"
+            },
+            ["QueryExecutor.lua"] = "57610c35574903d367d6605ef4631ffb",
+            Table = {
+               ["FieldType.lua"] = "5084c2ecf0033ccc754386bf600f1bc6",
+               ["Table.lua"] = "e214c71379780d19de4af6ab7c6c0bbf",
+               ["TableColumn.lua"] = "fa96c2218420634331bb372b468ac546"
+            },
+            Util = {
+               Class = {
+                  ["ChainableSubMethodsClass.lua"] = "7646de66147067e3994af89b152e7cc3",
+                  ["GettableAttributeMembersClass.lua"] = "b2661b842f8967b959e026ae437e15a5",
+                  ["SettableAttributeMembersClass.lua"] = "4b3014e81f2cd45fdc82a9c27c0542be"
+               },
+               ["Logger.lua"] = "5c86a994912140825912a71d2b58c6e7",
+               ["ObjectUtils.lua"] = "2d770e90aafcedacfe0de67b76c5255e",
+               SettingValueList = {
+                  ["SettingValue.lua"] = "1537bb2ed8e9170ad9d6748cd85477e5",
+                  ["SettingValueList.lua"] = "09e2ab1962c5d066daa691ffdb7af55d"
+               },
+               ["TableUtils.lua"] = "db7cb6bdf1c3316399c02d5882b96014",
+               ["TemplateRenderer.lua"] = "65a4bb6f8fa9951c062845149b794cfb",
+               Type = {
+                  ["Type.lua"] = "02df70bb10fed7b3f62d85efcdcc7336",
+                  ["TypeRestriction.lua"] = "d7cbb14cca88890011009f4d61cc509b",
+                  ["TypedValue.lua"] = "a9172517af34b38930355699e59d8d75"
+               }
+            }
+         }
+      }
+   },
+   ["luaorm-1.2.2-1.rockspec"] = "821b4f212487c20eec3288f7334789ca"
+}
