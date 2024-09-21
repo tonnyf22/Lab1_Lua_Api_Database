@@ -1,6 +1,6 @@
 Run project with <code>lua -l setup src/main.lua</code>.
 
-Do not forget to set up you MySQL database on machine before running.
+Do not forget to set up MySQL database on your machine before running.
 
 <code>src/db_inits.txt</code> - configuration file for setting connection parameters (order is IMPORTANT):
 
