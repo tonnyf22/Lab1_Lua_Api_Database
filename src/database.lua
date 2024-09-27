@@ -46,9 +46,9 @@ database.create_model = function()
 	local fieldTypes = API.fieldTypes
 
 	-- define float for LuaORM
-	fieldTypes.float = API.FieldType({
+	fieldTypes.double = API.FieldType({
 		luaDataType = "number",
-		SQLDataType = "float"
+		SQLDataType = "double"
 	})
 
 	Guys = Model({
@@ -57,7 +57,7 @@ database.create_model = function()
 			{ name = "id", isPrimaryKey = true, fieldType = fieldTypes.unsignedIntegerField, unique = true },
 			{ name = "name", fieldType = fieldTypes.charField, maxLength = 255 },
 			{ name = "gender", fieldType = fieldTypes.charField, maxLength = 255 },
-			{ name = "probability", fieldType = fieldTypes.float },
+			{ name = "probability", fieldType = fieldTypes.double },
 		}
 	},
 		{ createTable = true }
